@@ -23,7 +23,7 @@
         "cache-control": "no-cache, no-store, must-revalidate",
         "Access-Control-Allow-Origin": "*"
       },
-      "dest": "/api/apex/map.js"
+      "dest": "/api/apex/map.ts"
     }
   ]
 }

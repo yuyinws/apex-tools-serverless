@@ -1,5 +1,7 @@
-const axios = require('axios')
-const { domain } = require('./config')
+// const axios = require('axios')
+// const { domain } = require('./config')
+import axios from 'axios'
+import { domain } from './config'
 
 axios.interceptors.response.use(
   (res) => {
@@ -10,9 +12,15 @@ axios.interceptors.response.use(
   }
 )
 
-const _axios = (method, url, params) => {
+const _axios = (method: string, url: string, params: any) => {
   method = method.toUpperCase()
-  let options = {
+  interface Options {
+    method: any
+    url: string
+    data?: any
+    params?: any
+  }
+  let options: Options = {
     method: method,
     url: domain + url,
   }
@@ -27,6 +35,7 @@ const _axios = (method, url, params) => {
       options.params = params
     }
   }
+  
   return axios(options).then(
     (res) => {
       return res
