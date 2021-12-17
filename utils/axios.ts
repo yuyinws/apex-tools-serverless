@@ -1,5 +1,3 @@
-// const axios = require('axios')
-// const { domain } = require('./config')
 import axios from 'axios'
 import { domain } from './config'
 
