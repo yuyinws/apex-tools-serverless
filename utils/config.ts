@@ -1,3 +1,3 @@
 const domain = 'https://api.mozambiquehe.re/'
-const auth = 'GSeDL50Cguz8rSWbKuBT'
+const auth = process.env.AUTH
 export { domain, auth }
